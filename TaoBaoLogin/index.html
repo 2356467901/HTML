@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ch-en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>淘宝登录</title>
+    <link rel="stylesheet" href="./reset.css">
+    <style>
+        .header{position:absolute;z-index:100;width:100%}
+        .header .nov{position:absolute;z-index:90;height:80px;width:100%;background:#fff;}
+        .header .nov a{display:block;height:100%;width:30%}
+        .header .nov a img{margin:18px 0 0 50%;height:70%}
+        .header .banner{position:fixed;z-index:9;width:100%;display: block;}
+        .header .login{position:fixed;z-index:10;margin:120px 0 0 70%;padding:20px;width:300px;height:300px;background:#eee}
+        label{display:block;margin:24px auto 0;width:80%;height:34px;border:1px solid #ccc}
+        label img{float:left;display:block;padding:6px;width:23px;height:23px;background-color:#ccc}
+        label input{width:85%;height:34px;border:none}
+        .header .login #btn{display:block;margin:24px auto 0;width:80%;height:34px;background-color:#fc3800;color:#fff}
+        video{position:relative;top:-80px;overflow:hidden;width:100%;}
+        audio{position:fixed;bottom:0;left:25%;z-index:20;width:50%;height:4%}
+        .images{width:100%;position:relative;top:-84px}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nov">
+            <a href="https://www.taobao.com/"><img src="./logo.png"></a>
+        </div>
+        <a class="banner" href="https://mpage.taobao.com/hd/download.html">
+            <video muted autoplay> 
+                <source src="https://gw.alicdn.com/bao/uploaded/LB1bC41LVXXXXcGXFXXXXXXXXXX.mp4?spm=a1z3i.a4.0.0.NsEk6Q&file=LB1bC41LVXXXXcGXFXXXXXXXXXX.mp4" type="video/mp4"> 
+            </video>
+        </a>
+        <div class="login">
+            <h3>淘宝登录</h3>
+            <form action="#">
+                <label><img src="./taxt.png"><input type="text" name="账号" id="txt"></label>
+                <label><img src="./pass.png"><input type="password" name="密码" id="pass"></label>
+                <input type="button" value="登录" id="btn">
+                <img class="images" src="./images-1.png">
+            </form>
+        </div>
+        <audio src="./bgm.mp3" loop controls autoplay></audio>
+    </div>
+</body>
+</html>
+<script>
+    var text = document.getElementById('txt');
+    var pass = document.getElementById('pass');
+    var btn = document.getElementById('btn');
+    btn.onclick=function(){
+        if (text.value=='' && pass.value=='') {
+            alert('请输入账号密码。');
+        } else {
+            alert('假的，怎么可能真的登录淘宝啊！');
+        }
+    }
+</script>
